@@ -11,8 +11,10 @@ namespace Movimentacao.Models
         public virtual int IdBem { get; set; }
         public virtual string Tombo { get; set; }
         public virtual string Descricao { get; set; }
-        public Modelo Modelo { get; set; }
-        public Marca Marca { get; set; }
+        //public virtual int IdModelo { get; set; }
+        //public virtual int IdMarca { get; set; }
+        public virtual Modelo Modelo { get; set; }
+        public virtual Marca Marca { get; set; }
 
     }
 }

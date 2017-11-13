@@ -13,7 +13,7 @@ namespace Movimentacao.Mapping
 
         public MarcaMapping()
         {
-            Id(o => o.IdMarca).GeneratedBy.Sequence("Marca_IdMarca_Seq");
+            Id(o => o.IdMarca).GeneratedBy.Identity();
             Map(o => o.Descricao);
         }
 

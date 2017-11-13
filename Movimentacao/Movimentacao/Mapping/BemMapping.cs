@@ -8,13 +8,15 @@ using Movimentacao.Models;
 
 namespace Movimentacao.Mapping
 {
-    public class BemMapping : SubclassMap<Bem>
+    public class BemMapping : ClassMap<Bem>
     {
         public BemMapping()
         {
-            Id(o => o.IdBem).GeneratedBy.Sequence("Bem_IdBem_Seq");
+            Id(o => o.IdBem).GeneratedBy.Identity();
             Map(o => o.Tombo);
             Map(o => o.Descricao);
+            References(p => p.Modelo, "ModeloId");
+            References(p => p.Marca, "MarcaId");
         }
 
     }
