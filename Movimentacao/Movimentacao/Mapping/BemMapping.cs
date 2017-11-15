@@ -12,7 +12,7 @@ namespace Movimentacao.Mapping
     {
         public BemMapping()
         {
-            Id(o => o.IdBem).GeneratedBy.Identity();
+            Id(o => o.IdBem).GeneratedBy.Sequence("Bem_IdBem_Seq");
             Map(o => o.Tombo);
             Map(o => o.Descricao);
             References(p => p.Modelo, "ModeloId");

@@ -1,0 +1,27 @@
+﻿@model Movimentacao.Models.Bem
+
+@using (Html.BeginForm("Grava", "Bem", FormMethod.Post))
+{
+    @Html.LabelFor(p => p.IdBem, "Id:")
+    @Html.TextBoxFor(p => p.IdBem, new { @readonly = "true" })
+
+    @Html.LabelFor(p => p.Tombo, "Tombo:")
+    @Html.TextBoxFor(p => p.Tombo)
+    @Html.ValidationMessage("Tombo")
+
+    @Html.LabelFor(p => p.Descricao, "Descricao:")
+    @Html.TextBoxFor(p => p.Descricao)
+    @Html.ValidationMessage("Descricao")
+
+
+    @Html.LabelFor(p => p.Marca, "Marca:")
+    @Html.ValidationMessageFor(p => p.Marca.IdMarca)
+    @Html.DropDownListFor(p => p.Marca.IdMarca, new SelectList(ViewBag.Marca, "IdMarca", "Descricao", (Model.Marca != null) ? Model.Marca.IdMarca : 1))
+
+    @Html.LabelFor(p => p.Modelo, "Modelo:")
+    @Html.ValidationMessageFor(p => p.Modelo.IdModelo)
+    @Html.DropDownListFor(p => p.Modelo.IdModelo, new SelectList(ViewBag.Modelo, "IdModelo", "Descricao", (Model.Modelo != null) ? Model.Modelo.IdModelo : 1))
+
+        
+    <input type="submit" value="Salvar" />
+}

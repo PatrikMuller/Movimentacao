@@ -13,7 +13,7 @@ namespace Movimentacao.Mapping
 
         public ModeloMapping()
         {
-            Id(o => o.IdModelo).GeneratedBy.Identity();
+            Id(o => o.IdModelo).GeneratedBy.Sequence("Modelo_IdModelo_Seq");//.GeneratedBy.Identity();
             Map(o => o.Descricao);
         }
 
