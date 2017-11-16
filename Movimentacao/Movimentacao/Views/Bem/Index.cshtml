@@ -1,31 +1,46 @@
 ﻿@model IList<Movimentacao.Models.Bem>
 
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    ViewBag.Title = "Index";
+}
+
+<div class="jumbotron">
+    <h2>Lista Bens</h2>
+</div>
+
 @Html.ActionLink("Novo", "Form", "Bem");
 
+<div class="panel-body">
 
-<table>
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Tombo</th>
-            <th>Descrição</th>
-            <th>Marca</th>
-            <th>Modelo</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var p in Model)
-            {
-            <tr>
-                <td>@p.IdBem</td>
-                <td>@p.Tombo</td>
-                <td>@p.Descricao</td>
-                <td>@p.Marca.Descricao</td>
-                <td>@p.Modelo.Descricao</td>
-                @*<td>@Html.ActionLink("Remover", "Remove", new { id = p.IdBem })</td>*@
-                <td>@Html.ActionLink("Editar", "Form", new { id = p.IdBem })</td>
-            </tr>
-        }
-    </tbody>
-</table>
+    <div class="table-responsive">
+        @*<table class="table table-bordered table-hover">*@
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Tombo</th>
+                    <th>Descrição</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var p in Model)
+                {
+                    <tr>
+                        <td>@p.IdBem</td>
+                        <td>@p.Tombo</td>
+                        <td>@p.Descricao</td>
+                        <td>@p.Marca.Descricao</td>
+                        <td>@p.Modelo.Descricao</td>
+                        @*<td>@Html.ActionLink("Remover", "Remove", new { id = p.IdBem })</td>*@
+                        <td>@Html.ActionLink("Editar", "Form", new { id = p.IdBem })</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
