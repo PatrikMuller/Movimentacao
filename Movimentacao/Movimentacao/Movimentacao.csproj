@@ -176,6 +176,27 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Font\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\SB\css\sb-admin.css" />
+    <Content Include="Content\SB\css\sb-admin.min.css" />
+    <Content Include="Content\SB\js\sb-admin-charts.js" />
+    <Content Include="Content\SB\js\sb-admin-charts.min.js" />
+    <Content Include="Content\SB\js\sb-admin-datatables.js" />
+    <Content Include="Content\SB\js\sb-admin-datatables.min.js" />
+    <Content Include="Content\SB\js\sb-admin.js" />
+    <Content Include="Content\SB\js\sb-admin.min.js" />
+    <Content Include="Content\SB\Vendor\css\bootstrap-grid.css" />
+    <Content Include="Content\SB\Vendor\css\bootstrap-grid.min.css" />
+    <Content Include="Content\SB\Vendor\css\bootstrap-reboot.css" />
+    <Content Include="Content\SB\Vendor\css\bootstrap-reboot.min.css" />
+    <Content Include="Content\SB\Vendor\css\bootstrap.css" />
+    <Content Include="Content\SB\Vendor\css\bootstrap.min.css" />
+    <Content Include="Content\SB\Vendor\datatables\dataTables.bootstrap4.css" />
+    <Content Include="Content\SB\Vendor\datatables\dataTables.bootstrap4.js" />
+    <Content Include="Content\SB\Vendor\datatables\jquery.dataTables.js" />
+    <Content Include="Content\SB\Vendor\js\bootstrap.bundle.js" />
+    <Content Include="Content\SB\Vendor\js\bootstrap.bundle.min.js" />
+    <Content Include="Content\SB\Vendor\js\bootstrap.js" />
+    <Content Include="Content\SB\Vendor\js\bootstrap.min.js" />
     <Content Include="Content\Scripts\bootstrap.js" />
     <Content Include="Content\Scripts\bootstrap.min.js" />
     <None Include="Content\Scripts\jquery-1.10.2.intellisense.js" />
