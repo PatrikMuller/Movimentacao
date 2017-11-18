@@ -193,6 +193,13 @@
     <Content Include="Content\SB\Vendor\datatables\dataTables.bootstrap4.css" />
     <Content Include="Content\SB\Vendor\datatables\dataTables.bootstrap4.js" />
     <Content Include="Content\SB\Vendor\datatables\jquery.dataTables.js" />
+    <Content Include="Content\SB\Vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\SB\Vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\SB\Vendor\jquery-easing\jquery.easing.compatibility.js" />
+    <Content Include="Content\SB\Vendor\jquery-easing\jquery.easing.js" />
+    <Content Include="Content\SB\Vendor\jquery-easing\jquery.easing.min.js" />
+    <Content Include="Content\SB\Vendor\jquery\jquery.js" />
+    <Content Include="Content\SB\Vendor\jquery\jquery.min.js" />
     <Content Include="Content\SB\Vendor\js\bootstrap.bundle.js" />
     <Content Include="Content\SB\Vendor\js\bootstrap.bundle.min.js" />
     <Content Include="Content\SB\Vendor\js\bootstrap.js" />
