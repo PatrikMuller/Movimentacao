@@ -7,65 +7,89 @@
 }
 
 
-    <div class="card mb-3">
+<div class="card mb-3">
+    <div class="card-header">
+        Cadastro de Bens
+    </div>
+    <div class="card-body">
 
+        <div class="row">
 
-        <div class="card-header breadcrumb">
-            Cadastro de Bens
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group">
+                    <div class="dataTables_length" id="dataTable_length">
+                        <ul class="pagination">
+                            <li class="paginate_button page-item next">
+                                @Html.ActionLink("Lista", "Index", "Bem", new { @class = "page-link" })
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <div class="card-body">
 
-            @using (Html.BeginForm("Grava", "Bem", FormMethod.Post, new { @class = "form-horizontal" }))
-            {
-
-                <div class="form-group">
-                    @Html.LabelFor(p => p.IdBem, "Id:", new { @class = "control-label col-sm-2" })
-                    <div class="col-sm-10">
-                        @Html.TextBoxFor(p => p.IdBem, new { @readonly = "true", @class = "form-control" })
+        <div class="row">
+            <div class="col-sm-12">
+                @using (Html.BeginForm("Grava", "Bem", FormMethod.Post, new { @class = "form-horizontal" }))
+                {
+                    <div class="form-group">
+                        @Html.LabelFor(p => p.IdBem, "Id:", new { @class = "control-label col-sm-2" })
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(p => p.IdBem, new { @readonly = "true", @class = "form-control" })
+                        </div>
                     </div>
-                </div>
 
-
-                <div class="form-group">
-                    @Html.LabelFor(p => p.Tombo, "Tombo:", new { @class = "control-label col-sm-2" })
-                    <div class="col-sm-10">
-                        @Html.TextBoxFor(p => p.Tombo, new { @class = "form-control", placeholder = "Escreva o Tombo" })
-                        @Html.ValidationMessage("Tombo")
+                    <div class="form-group">
+                        @Html.LabelFor(p => p.Tombo, "Tombo:", new { @class = "control-label col-sm-2" })
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(p => p.Tombo, new { @class = "form-control", placeholder = "Escreva o Tombo" })
+                            @Html.ValidationMessage("Tombo")
+                        </div>
                     </div>
-                </div>
 
-
-                <div class="form-group">
-                    @Html.LabelFor(p => p.Descricao, "Descricao:", new { @class = "control-label col-sm-2" })
-                    <div class="col-sm-10">
-                        @Html.TextBoxFor(p => p.Descricao, new { @class = "form-control", placeholder = "Escreva a Descrição" })
-                        @Html.ValidationMessage("Descricao")
+                    <div class="form-group">
+                        @Html.LabelFor(p => p.Descricao, "Descricao:", new { @class = "control-label col-sm-2" })
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(p => p.Descricao, new { @class = "form-control", placeholder = "Escreva a Descrição" })
+                            @Html.ValidationMessage("Descricao")
+                        </div>
                     </div>
-                </div>
 
-
-                <div class="form-group">
-                    @Html.LabelFor(p => p.Marca, "Marca:", new { @class = "control-label col-sm-2" })
-                    <div class="col-sm-10">
-                        @Html.ValidationMessageFor(p => p.Marca.IdMarca)
-                        @Html.DropDownListFor(p => p.Marca.IdMarca, new SelectList(ViewBag.Marca, "IdMarca", "Descricao", (Model.Marca != null) ? Model.Marca.IdMarca : 1), new { @class = "form-control" })
+                    <div class="form-group">
+                        @Html.LabelFor(p => p.Marca, "Marca:", new { @class = "control-label col-sm-2" })
+                        <div class="col-sm-10">
+                            @Html.ValidationMessageFor(p => p.Marca.IdMarca)
+                            @Html.DropDownListFor(p => p.Marca.IdMarca, new SelectList(ViewBag.Marca, "IdMarca", "Descricao", (Model.Marca != null) ? Model.Marca.IdMarca : 1), new { @class = "form-control" })
+                        </div>
                     </div>
-                </div>
 
-
-                <div class="form-group">
-                    @Html.LabelFor(p => p.Modelo, "Modelo:", new { @class = "control-label col-sm-2" })
-                    <div class="col-sm-10">
-                        @Html.ValidationMessageFor(p => p.Modelo.IdModelo)
-                        @Html.DropDownListFor(p => p.Modelo.IdModelo, new SelectList(ViewBag.Modelo, "IdModelo", "Descricao", (Model.Modelo != null) ? Model.Modelo.IdModelo : 1), new { @class = "form-control" })
+                    <div class="form-group">
+                        @Html.LabelFor(p => p.Modelo, "Modelo:", new { @class = "control-label col-sm-2" })
+                        <div class="col-sm-10">
+                            @Html.ValidationMessageFor(p => p.Modelo.IdModelo)
+                            @Html.DropDownListFor(p => p.Modelo.IdModelo, new SelectList(ViewBag.Modelo, "IdModelo", "Descricao", (Model.Modelo != null) ? Model.Modelo.IdModelo : 1), new { @class = "form-control" })
+                        </div>
                     </div>
-                </div>
 
+                    
+
+                }
+
+            </div>
+        </div>
+
+
+        <div class="col-sm-12 col-md-6">
+            <div class="form-group">
                 <input type="submit" value="Salvar" class="btn btn-primary" />
-
-            }
-
+            </div>
         </div>
+
 
     </div>
+</div>
+
+
+
